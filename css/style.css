@@ -1,2 +1,154 @@
 @import url(base.css);
 @import url(variables.css);
+
+/*
+
+    HOME
+
+*/
+
+.home {
+    height: 120vh;
+}
+
+.home .header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    background-color: grey;
+    color: white;
+
+}
+
+.home .header p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.home .header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.home .header span {
+    font-size: 14px;
+    color: rgb(219, 218, 218);
+}
+
+/*
+
+    HOME - MENU
+
+*/
+.home .header .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.home .header .navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 20px;
+    width: 60%;
+    
+}
+.home .header .navbar ul li {
+    width: 185px;
+    padding: 15px 30px;
+}
+
+.home .header .navbar ul li a {
+    height: 55px;
+    background-color: white;
+    text-decoration: none;
+    color: var(--color-secondary);
+    border-radius: 5px / 5px;
+    box-shadow: 3px 5px 10px rgb(83, 83, 83);
+    width: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+
+    HOME - FORM
+
+*/
+
+.home .formSign {
+    display: flex;
+    color: var(--color-secondary);
+}
+
+/* INFO */
+
+.home .formSign .info {
+    width: 55%;
+    padding: 30px;
+}
+
+.home .formSign .info h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.home .formSign .info p:first-of-type {
+    margin-bottom: 30px;
+}
+
+/* SIGN */
+
+.home .formSign .sign {
+    padding: 30px;
+    width: 45%;
+}
+
+.home .formSign .sign label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.home .formSign .sign .input {
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid var(--color-primary);
+    padding: 11px;
+    margin-bottom: 30px;
+}
+
+/* CHECKS */
+
+.home .formSign .sign .checkInputs label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.home .formSign .sign .checkInputs .check {
+    margin-right: 2px;
+    
+}
+
+.home .formSign .sign .button {
+    padding: 15px 20px;
+    color: var(--color-secondary);
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.home .formSign .sign .button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0, 0.27, 0.93, 0.63);
+}

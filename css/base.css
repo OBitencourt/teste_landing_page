@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1170px;
+}
