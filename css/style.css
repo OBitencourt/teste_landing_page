@@ -152,3 +152,116 @@
     transition-duration: 200ms;
     transition-timing-function: cubic-bezier(0, 0.27, 0.93, 0.63);
 }
+
+
+/*
+
+    PRODUCTS
+
+*/
+
+.productsSection {
+    height: 100vh;
+}
+
+.productsSection .container {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.productsSection .container h2 {
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productsSection .container h2:before,
+.productsSection .container h2:after {
+    content: '';
+    width: 400px;
+    height: 2px;
+    background-color: var(--color-secondary);
+    margin: 0 30px;
+}
+
+.productsSection .container .products {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.productsSection .container .products .product {
+    width: 25%;
+    border: 1px solid var(--color-secondary);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: start;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.productsSection .container .products .product .text {
+    text-align: start;
+}
+
+.productsSection .container .products .product .text h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.productsSection .container .products .product .text p {
+    font-size: 17px;
+    margin-bottom:10px;
+}
+
+.productsSection .container .products .product .text h3 {
+    margin-bottom: 10px;
+}
+
+.productsSection .container .products .product .text span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.productsSection .container .products .product .text .button {
+    width: 100%;
+    border: 2px solid var(--color-primary);
+    padding: 10px ;
+    font-size: 20px;
+    background-color: white;
+    color: var(--color-secondary);
+    margin-top: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+.productsSection .container .products .product .text .button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0, 0.27, 0.93, 0.63);
+}
+
+/* CHANGE PAGE */
+
+.productsSection .container .changePage {
+    padding: 20px 60px;
+    font-size: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 7px;
+    margin-top: 30px;
+    background-color: white;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.productsSection .container .changePage:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0.27, 0.93, 0.63);
+}
