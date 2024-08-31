@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             this.cacheSelectors()
             this.bindEvents()
-            this.Events.fetchAPI()
+            this.Events.fetchAPI('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
         },
     
         cacheSelectors: function() {
@@ -16,11 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
             this.$inputEmail = document.querySelector('.inputEmail')
             this.$inputCPF = document.querySelector('.inputCPF')
             this.$productsBox = document.querySelector('.products')
+            this.$changePage = document.querySelector('.changePage')
         },
     
         bindEvents: function( ){
             const self = this
-    
+            
+            this.$changePage.addEventListener('click', function(e) {
+                self.Events.fetchAPI(self.nextPageURL)
+            }) 
             
             this.$formSign.addEventListener('submit', self.Events.formSign_error.bind(self)) // utilizar bind(self) pois o código não estava achando o submit da função
         },
@@ -84,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             },
     
-            fetchAPI: function(event) {
+            fetchAPI: function(url) {
     
                 
 
@@ -96,6 +100,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 function useData (data) {
                     const products = data.products
                     console.log(products)
+                    const nextPage = data.nextPage
+                    
+                    console.log(nextPage)
+
+                    Main.nextPageURL = `https://${nextPage}`
 
                     const productsBox = document.querySelector('.products')
     
@@ -137,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
     
-                fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1').then(transformJson).then(useData)
+                fetch(url).then(transformJson).then(useData)
             },
             
         }
